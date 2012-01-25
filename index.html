@@ -1,0 +1,92 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Redje - A regular expression tested for the web</title>
+	<meta name="description" content="A regular expression tester for the web">
+	<meta name="author" content="Andrew Cobby">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet/less" href="css/redje.less">
+
+    <script src="js/libs/less-1.1.6.min.js"></script>
+    <script type="text/javascript">
+        less.env = "development";
+    </script>
+	<script src="js/libs/modernizr-2.0.min.js"></script>
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="fill">
+            <div class="container">
+                <div id="topbar-content">
+                    <a class="brand" href="#">Redje</a>
+
+                    <ul class="nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="wrapper" class="container">
+        <div id="page-header">
+            <input type="text" name="regexp" id="regexp" placeholder="Regular expression">
+
+            <div id="tools">
+                <label><input type="checkbox" id="global"> Global</label>
+                <label><input type="checkbox" id="multiline"> Multiline</label>
+                <label><input type="checkbox" id="case-insensitive"> Case Insensitive</label>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row">
+                <div class="span11" id="main">
+                    <div id="main-inner">
+                        <div id="test-content-wrapper">
+                            <pre id="test-content" class="textarea">My name is Andrew Cobby andrew.cobby@gmail.com</pre>
+                        </div>
+
+                        <div id="test-content-editor-wrapper">
+                            <textarea class="textarea" id="test-content-editor"></textarea>
+
+                            <div id="test-content-tools" class="well">
+                                <button id="cancel" class="btn">Cancel (Esc)</button>
+                                <button id="save" class="btn primary">Save (<span class="saveShortcutText"></span>)</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4" id="sidebar">
+                    <h3>Secondary content</h3>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /container -->
+
+    <footer>
+        <p>&copy; <a href="http://cobbweb.me">Andrew Cobby</a> 2012</p>
+    </footer>
+
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.js"><\/script>')</script>
+    <script src="js/libs/bootstrap/bootstrap-buttons.js"></script>
+    <script src="js/libs/underscore-1.3.1.js"></script>
+    <script src="js/libs/backbone-0.5.3.js"></script>
+    <script src="js/libs/handlebars-1.0.0.beta2.js"></script>
+    <script src="js/redje.js"></script>
+
+<!--[if lt IE 7 ]>
+	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+<![endif]-->
+
+</body>
+</html>
