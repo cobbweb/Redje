@@ -139,7 +139,7 @@ var AppView = Backbone.View.extend({
         this.testContent = new TestContentView();
         this.flagInputs  = this.$("#tools input");
 
-        this.textContent.bind("onEditorSave", this.highlight);
+        this.testContent.bind("onEditorSave", this.highlight);
     },
 
     highlight: function() {
